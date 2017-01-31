@@ -36,6 +36,9 @@ gem 'bcrypt', '~> 3.1.11'
 # Flexible authentication solution for Rails with Warden
 gem 'devise', '~> 4.2'
 
+# HTML, CSS, and JS framework
+gem 'bootstrap-sass', '~> 3.3.7'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
