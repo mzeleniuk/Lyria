@@ -59,5 +59,10 @@ group :development do
   gem 'letter_opener', '~> 1.4.1'
 end
 
+group :test do
+  # Collection of testing matchers
+  gem 'shoulda-matchers', '~> 3.1'
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
