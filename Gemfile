@@ -62,6 +62,9 @@ end
 group :test do
   # Collection of testing matchers
   gem 'shoulda-matchers', '~> 3.1'
+
+  # Code coverage analysis tool for Ruby
+  gem 'simplecov', '~> 0.13.0', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

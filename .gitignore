@@ -18,3 +18,6 @@
 
 # Ignore IDEA IDE work directory
 .idea
+
+# Ignore test coverage results
+coverage
