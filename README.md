@@ -1,24 +1,27 @@
-# README
+# Lyria
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Real-time chat Application created with Rails 5, ActionCable and Devise.
 
-Things you may want to cover:
+## Ruby version
 
-* Ruby version
+Ruby 2.3.1
 
-* System dependencies
+## System dependencies
 
-* Configuration
+Rails 5.0.1
 
-* Database creation
+## Database creation
 
-* Database initialization
+Run `rails db:create` in Terminal.
 
-* How to run the test suite
+## Database initialization
 
-* Services (job queues, cache servers, search engines, etc.)
+Run `rails db:migrate` in Terminal.
 
-* Deployment instructions
+## How to run the test suite
 
-* ...
+Run `bundle exec rspec` in Terminal.
+
+## Services (job queues, cache servers, search engines, etc.)
+
+Redis
