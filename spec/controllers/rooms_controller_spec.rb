@@ -23,6 +23,29 @@ RSpec.describe RoomsController, type: :controller do
     end
   end
 
+  describe 'GET #show' do
+    let(:room) { create :room, user: user }
+
+    context 'when user is authenticated' do
+      before { sign_in user }
+
+      it 'responds successfully with an HTTP 200 status code' do
+        get :show, params: {id: room.id}
+
+        expect(response).to be_success
+        expect(response).to have_http_status(200)
+      end
+    end
+
+    context 'when user is not authenticated' do
+      it 'redirects to login page' do
+        get :show, params: {id: room.id}
+
+        expect(response).to redirect_to(new_user_session_path)
+      end
+    end
+  end
+
   describe 'GET #new' do
     context 'when user is authenticated' do
       before { sign_in user }
