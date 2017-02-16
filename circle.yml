@@ -12,6 +12,4 @@ dependencies:
 # Send test coverage results to Code Climate
 test:
   post:
-    - bundle exec codeclimate-test-reporter:
-      environment:
-        CODECLIMATE_REPO_TOKEN: '40f7fcae503a1b180738dec56b433fa3601689bba05c6b031c2a175d92dba35e'
+    - CODECLIMATE_REPO_TOKEN='40f7fcae503a1b180738dec56b433fa3601689bba05c6b031c2a175d92dba35e' bundle exec codeclimate-test-reporter
