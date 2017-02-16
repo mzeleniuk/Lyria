@@ -68,6 +68,9 @@ group :test do
 
   # Code coverage analysis tool for Ruby
   gem 'simplecov', '~> 0.13.0', require: false
+
+  # Show code coverage in Code Climate
+  gem 'codeclimate-test-reporter', '~> 1.0.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
