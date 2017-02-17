@@ -7,6 +7,7 @@ RSpec.describe 'rooms/show', type: :view do
 
   it 'renders show partial' do
     assign(:room, room)
+    assign(:message, Message.new)
     assign(:messages, [message])
     render
 

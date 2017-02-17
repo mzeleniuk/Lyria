@@ -2,7 +2,9 @@ class Message < ApplicationRecord
   belongs_to :user
   belongs_to :room
 
-  validates_presence_of :body, :user, :room
+  validates_presence_of :user, :room
+
+  validates :body, presence: true, length: {minimum: 2, maximum: 1000}
 
   def timestamp
     created_at.strftime('%H:%M:%S %d %B %Y')

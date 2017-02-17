@@ -10,6 +10,9 @@ RSpec.describe Message, type: :model do
     it { is_expected.to validate_presence_of(:body) }
     it { is_expected.to validate_presence_of(:user) }
     it { is_expected.to validate_presence_of(:room) }
+
+    it { is_expected.to validate_length_of(:body).is_at_least(2).with_message('is too short (minimum is 2 characters)') }
+    it { is_expected.to validate_length_of(:body).is_at_most(1000).with_message('is too long (maximum is 1000 characters)') }
   end
 
   describe '.timestamp' do
