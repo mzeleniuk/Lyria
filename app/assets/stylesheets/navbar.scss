@@ -1,0 +1,16 @@
+.navbar-default {
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  padding: 5px 15px;
+
+  img {
+    height: 40px;
+    width: auto;
+  }
+}

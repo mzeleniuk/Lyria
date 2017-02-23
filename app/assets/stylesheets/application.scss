@@ -15,4 +15,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@import "navbar";
 @import "message";
+
+body {
+  background-color: #f4f6fa;
+}
