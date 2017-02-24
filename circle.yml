@@ -8,3 +8,8 @@ machine:
 dependencies:
   pre:
     - gem install bundler
+
+# Send test coverage results to Code Climate
+test:
+  post:
+    - CODECLIMATE_REPO_TOKEN='40f7fcae503a1b180738dec56b433fa3601689bba05c6b031c2a175d92dba35e' bundle exec codeclimate-test-reporter
