@@ -1,0 +1,39 @@
+.wrap {
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto -100px;
+  padding: 0 0 100px;
+}
+
+.footer-basic-centered {
+  width: 100%;
+  height: 100px;
+  background-color: #ffffff;
+  border-top: 1px solid #e7eaec;
+  color: #8d9093;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+.footer-basic-centered .footer-company-name {
+  font-size: 20px;
+}
+
+.footer-basic-centered .footer-text {
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .footer-basic-centered {
+    padding: 20px;
+  }
+
+  .footer-basic-centered .footer-company-name {
+    font-size: 16px;
+  }
+
+  .footer-basic-centered .footer-text {
+    font-size: 12px;
+  }
+}

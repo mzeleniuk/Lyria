@@ -16,8 +16,12 @@
   </head>
 
   <body>
-    <%= render partial: 'shared/navbar' %>
+    <div class="wrap">
+      <%= render partial: 'shared/navbar' %>
 
-    <%= yield %>
+      <%= yield %>
+    </div>
+
+    <%= render partial: 'shared/footer' %>
   </body>
 </html>

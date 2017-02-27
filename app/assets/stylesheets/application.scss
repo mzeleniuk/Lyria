@@ -16,8 +16,13 @@
 @import "bootstrap";
 
 @import "navbar";
+@import "footer";
 @import "pages";
 @import "message";
+
+html, body {
+  height: 100%;
+}
 
 body {
   background-color: #f4f6fa;
