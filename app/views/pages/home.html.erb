@@ -1,0 +1,163 @@
+<!-- Header Carousel -->
+<header id="myCarousel" class="carousel slide">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <div class="carousel-inner">
+    <div class="item active">
+      <div class="fill slide-1"></div>
+
+      <div class="carousel-caption">
+        <h2>Connect people all over the Globe</h2>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="fill slide-2"></div>
+
+      <div class="carousel-caption">
+        <h2>Everywhere you wish</h2>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="fill slide-3"></div>
+
+      <div class="carousel-caption">
+        <h2>It's easy</h2>
+      </div>
+    </div>
+  </div>
+
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="icon-prev"></span>
+  </a>
+
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="icon-next"></span>
+  </a>
+</header>
+
+<!-- Page Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="page-header text-center">
+        <h1>Welcome to <strong>Lyria</strong></h1>
+        <p class="lead">A place for <em>unlimited</em> chatting</p>
+      </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h4>
+            <i class="glyphicon glyphicon-ok brand-success"></i>
+            <span>Join for free</span>
+          </h4>
+        </div>
+
+        <div class="panel-body">
+          <p>
+            It's totally free for everyone. All you need is just to confirm your registration through your email.
+            And that's it.
+          </p>
+
+          <%= link_to 'Register now', new_user_registration_path, class: 'btn btn-default' %>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h4>
+            <i class="glyphicon glyphicon-bullhorn brand-gray"></i>
+            <span>Real time conversations</span>
+          </h4>
+        </div>
+
+        <div class="panel-body">
+          <p>
+            Create unlimited real-time chat rooms or join any existing one. All your chat history will be
+            saved and accessible anytime and everywhere.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h4>
+            <i class="glyphicon glyphicon-star brand-warning"></i>
+            <span>Powerful and secure</span>
+          </h4>
+        </div>
+
+        <div class="panel-body">
+          <p>
+            Our Application is built using the most modern and secure web framework ever -
+            <a href="http://rubyonrails.org/" target="_blank">Ruby on Rails</a>. Just enjoy the Application and be
+            sure - your data is protected well.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <h2 class="page-header">Mobile version is available</h2>
+    </div>
+
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h4>
+            <i class="glyphicon glyphicon-phone brand-primary"></i>
+            <span>Keep chatting at home, in park, everywhere</span>
+          </h4>
+        </div>
+
+        <div class="panel-body">
+          <p>
+            We also have a responsive version of our Application, optimized for mobile phones and tablets. Take all
+            your chat rooms with you - in your mobile device.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <%= image_tag 'promo_mobile.jpg', class: 'img-responsive', alt: 'Mobile version' %>
+    </div>
+  </div>
+
+  <br>
+
+  <!-- Call to Action Section -->
+  <div class="well">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+        <p class="text-center">
+          Are you ready to start chatting?
+          <br>
+          It will take a couple of minutes to join in.</p>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <%= link_to new_user_registration_path, class: 'btn btn-lg btn-default btn-block' do %>
+          <i class="glyphicon glyphicon-link" aria-hidden="true"></i>
+          <span>Sign up now</span>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
