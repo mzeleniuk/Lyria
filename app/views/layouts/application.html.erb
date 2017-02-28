@@ -19,6 +19,13 @@
     <div class="wrap">
       <%= render partial: 'shared/navbar' %>
 
+      <% flash.each do |message_type, message| %>
+        <div class="alert <%= bootstrap_class_for(message_type) %> text-center">
+          <a href="#" class="close" data-dismiss="alert">&times;</a>
+          <%= message %>
+        </div>
+      <% end %>
+
       <%= yield %>
     </div>
 
