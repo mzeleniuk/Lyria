@@ -5,7 +5,7 @@ RSpec.describe 'rooms/new', type: :view do
     assign(:room, Room.new)
     render
 
-    expect(rendered).to match('Add chat room')
+    expect(rendered).to match('New chat room')
     expect(rendered).to match('Title')
     expect(rendered).to match('Description')
   end

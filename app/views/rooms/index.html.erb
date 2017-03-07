@@ -1,9 +1,20 @@
-<h1>Chat rooms</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-12">
+      <div class="page-header text-center">
+        <h1>Chat rooms</h1>
+      </div>
 
-<p class="lead">
-  <%= link_to 'New chat room', new_room_path, class: 'btn btn-primary' %>
-</p>
+      <p class="text-right">
+        <%= link_to new_room_path, class: 'btn btn-primary' do %>
+          <i class="glyphicon glyphicon-plus" aria-hidden="true"></i>
+          <span>New chat room</span>
+        <% end %>
+      </p>
 
-<ul>
-  <%= render @rooms %>
-</ul>
+      <div class="list-group">
+        <%= render @rooms %>
+      </div>
+    </div>
+  </div>
+</div>

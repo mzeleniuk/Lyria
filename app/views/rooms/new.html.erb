@@ -1,15 +1,37 @@
-<h1>Add chat room</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-12">
+      <div class="page-header text-center">
+        <h1>New chat room</h1>
+      </div>
 
-<%= form_for @room do |f| %>
-    <div class="form-group">
-      <%= f.label :title %>
-      <%= f.text_field :title, autofocus: true, class: 'form-control' %>
+      <%= form_for @room do |f| %>
+        <div class="form-group">
+          <label for="title">Title:</label>
+
+          <div class="input-group">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-tag" aria-hidden="true"></i>
+            </span>
+
+            <%= f.text_field :title, autofocus: true, class: 'form-control' %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description:</label>
+
+          <div class="input-group">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-tag" aria-hidden="true"></i>
+            </span>
+
+            <%= f.text_field :description, class: 'form-control' %>
+          </div>
+        </div>
+
+          <%= f.submit 'Create', class: 'btn btn-primary' %>
+      <% end %>
     </div>
-
-    <div class="form-group">
-      <%= f.label :description %>
-      <%= f.text_field :description, class: 'form-control' %>
-    </div>
-
-    <%= f.submit 'Add', class: 'btn btn-primary' %>
-<% end %>
+  </div>
+</div>

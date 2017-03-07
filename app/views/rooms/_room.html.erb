@@ -1,3 +1,9 @@
-<li>
-  <%= link_to "Enter #{room.title}", room_path(room) %>
-</li>
+<%= link_to room_path(room), class: 'list-group-item' do %>
+  <h4 class="list-group-item-heading">
+    <%= room.title %>
+
+    <span class="badge"><%= room.messages.count %></span>
+  </h4>
+
+  <p class="list-group-item-text text-muted"><%= room.description %></p>
+<% end %>

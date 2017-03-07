@@ -10,7 +10,7 @@ RSpec.describe 'rooms/index', type: :view do
     render
 
     expect(rendered).to match('Chat rooms')
-    expect(rendered).to match("Enter #{first_room.title}")
-    expect(rendered).to match("Enter #{second_room.title}")
+    expect(rendered).to match("#{first_room.title}")
+    expect(rendered).to match("#{second_room.title}")
   end
 end

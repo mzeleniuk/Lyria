@@ -1,19 +1,13 @@
-<div class="card">
-  <div class="card-block">
-    <div class="row">
-      <div class="avatar col-md-1">
-        <%= gravatar_for message.user %>
-      </div>
+<div class="media">
+  <div class="media-left media-top">
+    <%= gravatar_for message.user %>
+  </div>
 
-      <div class="col-md-11">
-        <p class="card-text">
-          <span class="text-muted">
-            <%= message.user.name %> at <%= message.timestamp %> says:</span>
-          <br>
+  <div class="media-body">
+    <p class="media-heading">
+      <%= message.user.name %> at <%= message.timestamp %> says:
+    </p>
 
-          <%= message.body %>
-        </p>
-      </div>
-    </div>
+    <p><%= message.body %></p>
   </div>
 </div>
