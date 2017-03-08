@@ -6,6 +6,8 @@
       </div>
 
       <%= form_for @room do |f| %>
+        <%= render 'shared/error_messages', object: @room %>
+
         <div class="form-group">
           <label for="title">Title:</label>
 
