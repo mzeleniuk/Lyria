@@ -1,4 +1,4 @@
-<div class="container m-t-lg">
+<div class="container m-t-lg m-b-md">
   <div class="row">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <div class="panel panel-primary">
@@ -14,7 +14,13 @@
 
         <div class="panel-body">
           <div id="messages" data-room-id="<%= @room.id %>">
-            <%= render @room.messages %>
+            <% if @room.messages.count > 0 %>
+              <%= render @room.messages %>
+            <% else %>
+              <p class="text-muted text-center">
+                <em>No messages were sent yet.</em>
+              </p>
+            <% end %>
           </div>
         </div>
       </div>
@@ -26,13 +32,17 @@
               <i class="glyphicon glyphicon-comment" aria-hidden="true"></i>
             </span>
 
-            <%= f.text_area :body, class: 'form-control', placeholder: 'Your message...', required: true %>
+            <%= f.text_area :body, class: 'form-control', placeholder: 'Your message...', minlength: '2',
+                            maxlength: '1000', required: true %>
           </div>
 
           <small class="text-muted">From 2 to 1000 characters</small>
         </div>
 
-        <%= f.submit 'Post', class: 'btn btn-primary' %>
+        <%= button_tag type: 'submit', class: 'btn btn-primary' do %>
+          <i class="glyphicon glyphicon-send" aria-hidden="true"></i>
+          <span class="m-l-xs">Send message</span>
+        <% end %>
       <% end %>
     </div>
   </div>
