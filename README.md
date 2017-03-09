@@ -29,3 +29,11 @@ Run `bundle exec rspec` in Terminal.
 ## Services (job queues, cache servers, search engines, etc.)
 
 Redis
+
+## How to run a static analysis security vulnerability scanner
+
+Run `brakeman` in console.
+
+## How to run a Ruby static code analyzer
+
+Run `rubocop` in console.

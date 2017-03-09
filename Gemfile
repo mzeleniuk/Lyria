@@ -60,6 +60,12 @@ group :development do
 
   # Preview mail in the browser instead of sending
   gem 'letter_opener', '~> 1.4.1'
+
+  # A static analysis security vulnerability scanner for Ruby on Rails applications
+  gem 'brakeman', '~> 3.5.0', require: false
+
+  # A Ruby static code analyzer, based on the community Ruby style guide
+  gem 'rubocop', '~> 0.47.1', require: false
 end
 
 group :test do
