@@ -1,4 +1,13 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'from@example.com'
+  include Roadie::Rails::Automatic
+
+  default from: 'no_reply@lyria.com'
+
   layout 'mailer'
+
+  private
+
+  def roadie_options
+    super unless Rails.env.test?
+  end
 end
