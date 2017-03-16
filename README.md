@@ -12,7 +12,7 @@ Ruby 2.3.1
 
 ## System dependencies
 
-Rails 5.0.1
+Rails 5.0.2
 
 ## Database creation
 
@@ -32,8 +32,8 @@ Redis
 
 ## How to run a static analysis security vulnerability scanner
 
-Run `brakeman` in console.
+Run `brakeman` in Terminal.
 
 ## How to run a Ruby static code analyzer
 
-Run `rubocop` in console.
+Run `rubocop` in Terminal.
