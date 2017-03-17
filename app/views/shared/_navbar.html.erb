@@ -26,7 +26,7 @@
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
           <li class="navbar-text">
-            Logged in as <strong><%= current_user.name %></strong>
+            Logged in as <strong><%= current_user.username %></strong>
           </li>
           <li>
             <%= link_to rooms_path do %>

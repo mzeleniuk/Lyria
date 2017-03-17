@@ -7,7 +7,5 @@ class User < ApplicationRecord
   has_many :rooms, dependent: :destroy
   has_many :messages, dependent: :destroy
 
-  def name
-    email.split('@')[0]
-  end
+  validates :username, presence: true, length: {maximum: 15}, uniqueness: {case_sensitive: false}
 end

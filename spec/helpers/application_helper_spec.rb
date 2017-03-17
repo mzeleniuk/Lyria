@@ -5,7 +5,7 @@ RSpec.describe ApplicationHelper, type: :helper do
 
   describe '#gravatar_for' do
     it 'returns the proper image' do
-      expect(helper.gravatar_for(user)).to match("img alt=\"#{user.name}\" src=\"https://www.gravatar.com/avatar/")
+      expect(helper.gravatar_for(user)).to match("img alt=\"#{user.username}\" src=\"https://www.gravatar.com/avatar/")
     end
   end
 
