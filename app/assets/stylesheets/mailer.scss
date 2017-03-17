@@ -2,10 +2,144 @@
 
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i');
 
-body {
+* {
+  margin: 0;
+  padding: 0;
   font-family: 'Source Sans Pro', sans-serif;
+  color: #384151;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #e1e4eb;
+}
+
+.body-wrap {
+  background-color: #e1e4eb;
+  width: 100%;
+}
+
+.container {
+  display: block;
+  max-width: 1024px;
+  margin: 0 auto;
+  clear: both;
+}
+
+.content {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: block;
+  padding: 20px;
+}
+
+.main {
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.content-wrap {
+  padding: 20px;
+}
+
+.content-block {
+  padding: 0 0 20px;
+}
+
+.header {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.btn-blue {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  background-color: #6699ff;
+  border-color: #6699ff;
+  padding: 6px 12px;
+  line-height: 2;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+.footer {
+  width: 100%;
+  color: #ffffff;
+  background-color: #4c566a;
+  padding: 20px;
+  clear: both;
+}
+
+.footer a {
+  text-decoration-color: #a0bfff;
+}
+
+.footer a, .footer p {
+  color: #ffffff;
+  font-size: 14px;
+  margin: 0;
+}
+
+h1, h2, h3 {
+  margin: 20px 0 0;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: 700;
 }
 
 p {
   font-size: 16px;
+}
+
+ol, p, ul {
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+ol li, p li, ul li {
+  margin-left: 5px;
+  list-style-position: inside;
+}
+
+a {
+  text-decoration: underline;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.clear {
+  clear: both;
 }
