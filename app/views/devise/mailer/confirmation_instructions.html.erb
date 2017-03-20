@@ -1,5 +1,30 @@
-<p>Welcome <%= @email %>!</p>
+<div class="body-wrap">
+  <div class="container">
+    <div class="content">
+      <div class="main">
+        <div class="content-wrap">
+          <h2 class="header align-center">
+            Welcome <%= @resource.username %>!
+          </h2>
 
-<p>You can confirm your account email through the link below:</p>
+          <div class="content-block">
+            <p>
+              You can confirm your account email through the link below:
+            </p>
 
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+            <p>
+              <%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token),
+                          class: 'btn-blue' %>
+            </p>
+          </div>
+        </div>
+
+        <div class="footer">
+          <p class="align-center">
+            <%= link_to 'Lyria', root_url %> - <%= Date.current.year %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
