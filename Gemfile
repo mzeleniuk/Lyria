@@ -42,6 +42,9 @@ gem 'bootstrap-sass', '~> 3.3.7'
 # Hooks Roadie into Rails application to help with email generation
 gem 'roadie-rails', '~> 1.1.1'
 
+# A fast, pure Ruby Markdown superset converter
+gem 'kramdown', '~> 1.13.2'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

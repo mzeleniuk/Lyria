@@ -8,6 +8,6 @@
       <%= message.user.username %> at <%= message.timestamp %> says:
     </p>
 
-    <p><%= message.body %></p>
+    <p><%= sanitize markdown_to_html(message.body) %></p>
   </div>
 </div>
