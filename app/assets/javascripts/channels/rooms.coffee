@@ -35,3 +35,12 @@ jQuery(document).on 'turbolinks:load', ->
       e.preventDefault()
 
       return false
+
+    $('#message_body').on 'keydown', (event) ->
+      textarea = $(this)
+
+      if event.keyCode is 13 && event.shiftKey && $.trim(textarea.val()).length > 1
+        App.global_chat.send_message textarea.val(), messages.data('room-id')
+        textarea.val('')
+
+        event.preventDefault()
