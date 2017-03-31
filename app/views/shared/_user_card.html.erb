@@ -1,0 +1,15 @@
+<div class="card hover-card">
+  <div class="card-header"></div>
+
+  <div class="avatar">
+    <%= gravatar_for user %>
+  </div>
+
+  <div class="info">
+    <div class="title">
+      <%= user.username %>
+    </div>
+
+    <div class="desc">Signed up: <%= user.confirmed_at.strftime('%d %B %Y') %></div>
+  </div>
+</div>

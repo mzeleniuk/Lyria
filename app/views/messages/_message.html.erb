@@ -1,11 +1,18 @@
 <div class="media">
-  <div class="media-left media-top">
+  <div class="user-avatar media-left media-top">
     <%= gravatar_for message.user %>
   </div>
 
   <div class="media-body">
-    <p class="media-heading">
-      <%= message.user.username %> at <%= message.timestamp %> says:
+    <p class="media-heading user-comment">
+      <%= content_tag :a, role: 'button', tabindex: 0, title: "About #{message.user.username}",
+                      data: {toggle: 'popover', trigger: 'focus', placement: 'top', html: true,
+                             content: "#{render partial: 'shared/user_card', locals: {user: message.user}}"} do %>
+        <%= message.user.username %>
+      <% end %>
+      <br>
+
+      <span class="small text-muted">at <%= message.timestamp %> says:</span>
     </p>
 
     <p><%= sanitize markdown_to_html(message.body) %></p>
