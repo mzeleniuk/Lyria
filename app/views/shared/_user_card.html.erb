@@ -10,6 +10,10 @@
       <%= user.username %>
     </div>
 
+    <% if user.about_me.present? %>
+      <div class="desc"><%= user.about_me %></div>
+    <% end %>
+
     <div class="desc">Signed up: <%= user.confirmed_at.strftime('%d %B %Y') %></div>
   </div>
 </div>

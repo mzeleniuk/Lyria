@@ -8,4 +8,5 @@ class User < ApplicationRecord
   has_many :messages, dependent: :destroy
 
   validates :username, presence: true, length: {maximum: 50}, uniqueness: {case_sensitive: false}
+  validates :about_me, length: {maximum: 500}
 end
