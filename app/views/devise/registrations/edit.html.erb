@@ -40,11 +40,13 @@
               </div>
             </div>
 
-            <div class="checkbox">
-              <label>
-                <%= f.check_box :show_email %>
-                Show my email in the info card
-              </label>
+            <div class="form-group switcher">
+              <div class="material-switch m-r-xs">
+                <%= f.check_box :show_email, id: 'switchSuccess' %>
+                <label for="switchSuccess" class="label-primary"></label>
+              </div>
+
+              <label class="switcher-label">Show my email in the info card</label>
             </div>
 
             <div class="form-group">
