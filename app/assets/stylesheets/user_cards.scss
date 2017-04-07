@@ -1,13 +1,14 @@
-.user-comment .popover {
+.users-list .popover, .my-card .popover {
   max-width: 300px;
   width: 300px;
 }
 
-.user-comment .popover .popover-title {
+.users-list .popover .popover-title, .my-card .popover .popover-title {
   text-align: center;
+  color: #000000;
 }
 
-.user-comment .popover .popover-content {
+.users-list .popover .popover-content, .my-card .popover .popover-content {
   padding: 0;
 }
 

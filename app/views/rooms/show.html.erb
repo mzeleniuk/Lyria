@@ -4,12 +4,38 @@
       <div class="panel panel-primary">
         <div class="panel-heading text-center">
           <h3 class="panel-title">
+            <a class="show-users-list pull-right" role="button" data-toggle="collapse" href="#collapseUsersList"
+               aria-expanded="false" aria-controls="collapseUsersList" title="Show messaged users">
+              <i class="glyphicon glyphicon-menu-down" aria-hidden="true"></i>
+            </a>
+
             <%= @room.title %>
           </h3>
 
           <span class="small">
             <%= @room.description %>
           </span>
+
+          <div class="collapse users-list" id="collapseUsersList">
+            <ul class="list-inline">
+              <% if @room.messages.count == 0 %>
+                <li>
+                  <em>No users messaged yet.</em>
+                </li>
+              <% else %>
+                <% @room.messages.map(&:user).uniq.each do |user| %>
+                  <li>
+                    <%= content_tag :a, role: 'button', tabindex: 0, title: "About #{user.username}",
+                                    data: {toggle: 'popover', trigger: 'focus', placement: 'bottom', html: true,
+                                           content: "#{render partial: 'shared/user_card', locals: {user: user}}"} do %>
+                      <i class="glyphicon glyphicon-user" aria-hidden="true"></i>
+                      <%= user.username %>
+                    <% end %>
+                  </li>
+                <% end %>
+              <% end %>
+            </ul>
+          </div>
         </div>
 
         <div class="panel-body">

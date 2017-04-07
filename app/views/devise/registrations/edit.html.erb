@@ -120,7 +120,7 @@
                   <%= f.submit 'Update', class: 'btn btn-default pull-left' %>
                 </div>
 
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 user-comment">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 my-card">
                   <%= content_tag :a, role: 'button', tabindex: 0, title: "About #{current_user.username}",
                                   data: {toggle: 'popover', trigger: 'focus', placement: 'top', html: true,
                                          content: "#{render partial: 'shared/user_card',
