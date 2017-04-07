@@ -19,7 +19,6 @@ jQuery(document).on 'turbolinks:load', ->
 
       received: (data) ->
         messages.append data['message']
-        $('[data-toggle="popover"]').popover()
         messages_to_bottom()
 
       send_message: (message, room_id) ->

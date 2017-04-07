@@ -19,11 +19,12 @@
   }
 }
 
-.users-list a {
+.users-list a.card-link {
   color: #f5f5f5;
+  outline: none;
 }
 
-.users-list a:hover, .users-list a:active, .users-list a:focus {
+.users-list a.card-link:hover, .users-list a.card-link:active, .users-list a.card-link:focus {
   color: #ffffff;
   text-decoration: none;
 }
