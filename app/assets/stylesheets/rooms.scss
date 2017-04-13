@@ -28,3 +28,11 @@
   color: #ffffff;
   text-decoration: none;
 }
+
+.online_status {
+  transition: color 1s ease;
+
+  &.online {
+    color: #5cb85c;
+  }
+}

@@ -9,4 +9,8 @@ class User < ApplicationRecord
 
   validates :username, presence: true, length: {maximum: 50}, uniqueness: {case_sensitive: false}
   validates :about_me, length: {maximum: 500}
+
+  def online?
+    Redis.new.get("user_#{self.id}_online").present?
+  end
 end

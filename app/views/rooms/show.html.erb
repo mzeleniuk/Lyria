@@ -28,7 +28,8 @@
                     <%= content_tag :a, role: 'button', tabindex: 0, title: "About #{user.username}", class: 'card-link',
                                     data: {toggle: 'popover', trigger: 'focus', placement: 'bottom', html: true,
                                            content: "#{render partial: 'shared/user_card', locals: {user: user}}"} do %>
-                      <i class="glyphicon glyphicon-user" aria-hidden="true"></i>
+                      <i class="glyphicon glyphicon-user user-<%= user.id %> online_status <%= 'online' if user.online? %>"
+                         aria-hidden="true"></i>
                       <%= user.username %>
                     <% end %>
                   </li>
@@ -64,7 +65,7 @@
               <i class="glyphicon glyphicon-comment" aria-hidden="true"></i>
             </span>
 
-            <%= f.text_area :body, class: 'form-control', placeholder: 'Your message...', minlength: '2',
+            <%= f.text_area :body, class: 'form-control vertical', placeholder: 'Your message...', minlength: '2',
                             maxlength: '1000', required: true %>
           </div>
 
