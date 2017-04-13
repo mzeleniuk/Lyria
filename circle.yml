@@ -3,6 +3,8 @@ machine:
   ruby:
     version:
       2.3.1
+  services:
+    - redis
 
 # Project-specific dependencies
 dependencies:
