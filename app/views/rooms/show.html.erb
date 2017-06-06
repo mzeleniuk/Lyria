@@ -26,7 +26,7 @@
                 <% @room.messages.map(&:user).uniq.each do |user| %>
                   <li>
                     <%= content_tag :a, role: 'button', tabindex: 0, title: "About #{user.username}", class: 'card-link',
-                                    data: {toggle: 'popover', trigger: 'focus', placement: 'bottom', html: true,
+                                    data: {toggle: 'popover', trigger: 'hover focus', placement: 'bottom', html: true,
                                            content: "#{render partial: 'shared/user_card', locals: {user: user}}"} do %>
                       <i class="glyphicon glyphicon-user user-<%= user.id %> online_status <%= 'online' if user.online? %>"
                          aria-hidden="true"></i>

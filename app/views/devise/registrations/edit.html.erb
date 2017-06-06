@@ -122,7 +122,7 @@
 
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 my-card">
                   <%= content_tag :a, role: 'button', tabindex: 0, title: "About #{current_user.username}",
-                                  data: {toggle: 'popover', trigger: 'focus', placement: 'top', html: true,
+                                  data: {toggle: 'popover', trigger: 'hover focus', placement: 'top', html: true,
                                          content: "#{render partial: 'shared/user_card',
                                                             locals: {user: current_user}}"},
                                   class: 'btn btn-link pull-right' do %>

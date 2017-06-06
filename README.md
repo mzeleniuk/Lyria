@@ -12,7 +12,7 @@ Ruby 2.3.1
 
 ## System dependencies
 
-Rails 5.0.2
+Rails 5.0.3
 
 ## Database creation
 
