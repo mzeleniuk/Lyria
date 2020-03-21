@@ -5,14 +5,14 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-ruby '2.3.1'
+ruby '2.5.7'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.3'
+gem 'rails', '5.0.7.2'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.20.0'
 # Use Puma as the app server
-gem 'puma', '~> 3.0'
+gem 'puma', '3.12.4'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -34,7 +34,7 @@ gem 'redis', '~> 3.3'
 gem 'bcrypt', '~> 3.1.11'
 
 # Flexible authentication solution for Rails with Warden
-gem 'devise', '~> 4.2.1'
+gem 'devise', '4.7.1'
 
 # HTML, CSS, and JS framework
 gem 'bootstrap-sass', '~> 3.3.7'
